@@ -66,12 +66,13 @@ class SecurityContext(object):
 class ExecutionContext(object):
     def __init__(self, workflow_execution_id=None, task_execution_id=None,
                  action_execution_id=None, workflow_name=None,
-                 callback_url=None, task_id=None):
+                 callback_url=None, task_id=None, conf={}):
         self.workflow_execution_id = workflow_execution_id
         self.task_execution_id = task_execution_id
         self.action_execution_id = action_execution_id
         self.workflow_name = workflow_name
         self.callback_url = callback_url
+        self.conf = conf
 
         if task_id is not None:
             self.task_execution_id = task_id
